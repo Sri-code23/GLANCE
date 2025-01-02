@@ -4,7 +4,7 @@
     --text-color: #ffffff;
     --accent-color: #0c0c0c;
     --hover-color: #3a3a3a;
-    --highlight-color: #008a5c;
+    --highlight-color: #019664;
     --code-color:#01bbbb;
 }
 
@@ -18,8 +18,8 @@ body {
 }
 
 ::selection{
-    /* background-color: #2eff9e; */
-    color: #01bbbb;
+    background-color: #003624;
+    color: #00ffaa;
 }
 
 .container {
@@ -104,7 +104,6 @@ h1 {
     border-radius: 10px;
 }
 
-
 .sidebar.open {
     left: 0;
     box-shadow: 50px 50px 500px #000000,
@@ -117,8 +116,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--accent-color);
-    
+    background-color: #003624;
 }
 
 .sidebar-header h2 {
@@ -135,6 +133,7 @@ h1 {
 
 .sidebar li {
     padding: 0.5rem 1rem;
+    font-size: 18px;
     /* border-bottom: 1px solid var(--text-color); */
 }
 
@@ -145,7 +144,6 @@ h1 {
     display: block;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
-    
 }
 
 .sidebar a:hover {
@@ -199,7 +197,7 @@ button:hover {
 }
 
 #closeSidebar:hover {
-    color: var(--highlight-color);
+    color: var(--primary-bg);
 }
 
 main {
@@ -339,7 +337,6 @@ main pre code {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 0.8rem;
     }
-
     .language-item {
         background-color: var(--secondary-bg);
         padding: 1rem;
@@ -351,27 +348,41 @@ main pre code {
         margin-left: 10px;
         margin-right: 10px;
     }
-
     .sticky-header {
-        padding: 0.3rem;
+        padding: 1rem;
     }
-
     .sticky-header h1{
         font-size: 2rem;
         margin-right: 40%;
     }
-
     #backButton {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
-
     .content {
         margin-left: 10px;
         margin-right: 10px;
         padding: 0;
         transition: margin-left 0.3s ease;
+    }
+    .sticky-header{
+        padding: 1.2rem;
+        box-shadow: #000000;
+        background: blur(60px);
+    }
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+    button{
+        font-size: 25px;
+        margin-left: 0px;
+        padding-left: 0;
+    }
+    #closeSidebar {
+        font-size: 1.5rem;
+        color: #000000;
     }
 }
