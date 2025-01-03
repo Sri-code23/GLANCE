@@ -1087,7 +1087,8 @@ def detail(request,post_id):
 * then add a details.html page to display the info that id 
 * here 'details.html' is used
 * in html file
-```html
+
+```
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -1227,6 +1228,7 @@ def detail(request,post_id):
 here we are trying to redirect the user to the home oage when he presses the home option in the details.html
 
 * to do that 
+  
 ```python
 #views.py
 def details_to_base(request):
@@ -1576,14 +1578,14 @@ class User_database(models.Model):
         return self.username
 ```
 
-```
+```bash
 IMPORTANT NOTE:
 Arrange the primary key table(i.e, category table) in the firt and the foreign key table in the seoond row  refer the above program
 
 ```
 
 now run the commands 
-```
+```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
@@ -1595,6 +1597,7 @@ the terminal will ask for an default value, enter a default value and proceed
 * then in the 'populate_posts.py' alter the program to add foreign key value ,
 * for here we use random category
 now in 'populatePosts.py' , alter things by
+
 ```python
 import random
 
@@ -1607,9 +1610,11 @@ User_database.objects.create(username=username,email=email,password=passw,img_ur
 ```
 
 * now run the command
-```
+```bash
 python manage.py populate_posts
-```now the category_id are filled withrandom category_id from category_table
+```
+
+now the category_id are filled withrandom category_id from category_table
 
 -- Now to apply and use the category table data in the application, do as follows
 
@@ -1623,20 +1628,20 @@ the overall html template looks like,
 
 ```html
 <div class="post-grid">
-                {% for dta in database %}
+            {% for dta in database %}
                 
-                <div class="post-card">
-                    <img src="{{dta.img_url}}" alt="image">
-                    <div class="post-content">
-                        <h3>Username : {{dta.username}} </h3>
+            <div class="post-card">
+                <img src="{{dta.img_url}}" alt="image">
+                <div class="post-content">
+                    <h3>Username : {{dta.username}} </h3>
 
-                        <p> category : {{dta.category_id.c_name}} </p>
+                    <p> category : {{dta.category_id.c_name}} </p>
 
-                        <a href="{% url 'Notes:Post_detail' slug=dta.slug %}" class="read-more">read-more</a>
-                    </div>
+                    <a href="{% url 'Notes:Post_detail' slug=dta.slug %}" class="read-more">read-more</a>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
+        </div>
 ```
 
 now you can see the output in te web page
