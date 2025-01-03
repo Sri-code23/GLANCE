@@ -373,7 +373,7 @@ main pre code {
         background: blur(60px);
     }
     .sidebar {
-        width: 100%;
+        width: 75%;
         left: -100%;
     }
     button{
