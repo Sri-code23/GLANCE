@@ -106,9 +106,9 @@ h1 {
 
 .sidebar.open {
     left: 0;
-    box-shadow: 50px 50px 500px #000000,
+    /* box-shadow: 50px 50px 500px #000000,
     80px 80px 800px #000000,
-    100px 100px 1000px #000000;
+    100px 100px 1000px #000000; */
 }
 
 .sidebar-header {
@@ -353,7 +353,7 @@ main pre code {
     }
     .sticky-header h1{
         font-size: 2rem;
-        margin-right: 40%;
+        margin-right: 34%;
     }
     #backButton {
         display: none;
