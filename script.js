@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Always show all content
                 mainContent.innerHTML = html;
 
-                
                 // // Highlight comments
                 // const comments = mainContent.querySelectorAll('code');
                 // comments.forEach(comment => {
@@ -66,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 //         });
                 //     }
                 // });
-                
 
                 // Create sidebar links
                 const headers = mainContent.querySelectorAll('h2');
@@ -124,10 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-
 
 
 
@@ -261,17 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //         }
 //     });
 // });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
