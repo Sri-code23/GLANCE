@@ -402,13 +402,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "My_app/static")]
 </head>
 
 ```
+same is done for the signup.html
 
-## same is done for the signup.html
-
-
-## add as many views as you wish and update that in the both urls,urls.py
-
-
+add as many views as you wish and update that in the both urls,urls.py
 
 ## redirect and reverse function
 in views.py
@@ -416,8 +412,8 @@ in views.py
 from django.urls import reverse
 ```
 
-
-## then declare the app_name variablewith the app name
+## app_name 
+then declare the app_name variable with the app name
 in urls.py from my app, update
 ```python
 app_name='Notes'
@@ -461,7 +457,7 @@ in index.html,
 <!--html file that extends the base.html-->
  {% endblock %}
 ```
-## include method for layout
+### include method for layout
 
 ## Variable interpolation
 for dynamic values(changing values),
